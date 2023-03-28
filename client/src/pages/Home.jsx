@@ -1,52 +1,9 @@
-import bootstrap from "bootstrap";
+import { Card } from "../components/Card";
+import { Navbar } from "../components/Navbar";
 export const Home = () => {
   return (
     <>
-      <nav className="navbar navbar-expand-md bg-dark navbar-dark sticky-top zindex-sticky py-3">
-        <div className="container">
-          <a className="navbar-brand" href="#">
-            Logo Brand
-          </a>
-          <button
-            className="navbar-toggler"
-            type="button"
-            data-bs-toggle="collapse"
-            data-bs-target="#navbarNav"
-            aria-controls="navbarNav"
-            aria-expanded="false"
-            aria-label="Toggle navigation"
-          >
-            <span className="navbar-toggler-icon"></span>
-          </button>
-          <div
-            className="collapse navbar-collapse justify-content-end"
-            id="navbarNav"
-          >
-            <ul className="navbar-nav">
-              <li className="nav-item">
-                <a className="nav-link" href="#">
-                  Home
-                </a>
-              </li>
-              <li className="nav-item">
-                <a className="nav-link" href="#aboutus">
-                  About
-                </a>
-              </li>
-              <li className="nav-item">
-                <a className="nav-link" href="#services">
-                  Services
-                </a>
-              </li>
-              <li className="nav-item">
-                <a className="nav-link" href="#contact">
-                  Contact
-                </a>
-              </li>
-            </ul>
-          </div>
-        </div>
-      </nav>
+      <Navbar />
 
       <main>
         <div className="bg-dark p-5">
@@ -339,29 +296,16 @@ export const Home = () => {
               </div>
             </div>
             <div className="row g-3">
-              <div className="col-md-3 col-sm-6 col-12">
-                <div className="card text-center pt-4">
-                  <div className="card-body">
-                    <img
-                      alt=""
-                      src="https://randomuser.me/api/portraits/women/60.jpg"
-                      className="img-fluid rounded-circle"
-                    />
-                    <h2 className="card-title">Jennie</h2>
-                    <p className="card-text">
-                      Lorem Ipsum is simply dummy text of the printing and
-                      typesetting industry. It has survived not only publishing
-                      Lorem Ipsum.
-                    </p>
-                    <div className="">
-                      <i className="bi bi-facebook px-1"></i>{" "}
-                      <i className="bi bi-instagram px-1"></i>{" "}
-                      <i className="bi bi-twitter px-1"></i>
-                      <i className="bi bi-linkedin"></i>
-                    </div>
-                  </div>
-                </div>
-              </div>
+              {/* neg card  */}
+              {
+                <Card
+                  imageUrl={"https://randomuser.me/api/portraits/women/60.jpg"}
+                  name={"Jennie"}
+                  text={
+                    "Lorem Ipsum is simply dummy text of the printing and typesetting industry. It has survived not only publishing Lorem Ipsum."
+                  }
+                />
+              }
               <div className="col-md-3 col-sm-6 col-12">
                 <div className="card text-center pt-4">
                   <div className="card-body">
