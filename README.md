@@ -1,3 +1,3 @@
-# Mern Template made by [@temkanibno](https://github.com/temuulennibno)
+# Mern Template made by [Kil-A-Bytes TEAM](https://github.com/Kil-A-Bytes-team)
 
 
