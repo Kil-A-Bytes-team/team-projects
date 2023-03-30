@@ -1,49 +1,51 @@
+import { NavbarDropDown } from './NavbarDropDown';
+
 export const Navbar = () => {
   return (
     <>
-      <nav className="navbar navbar-expand-md bg-dark navbar-dark sticky-top zindex-sticky py-3">
+      <nav className="navbar navbar-expand-md  bg-cyan-900 navbar-dark sticky-top zindex-sticky py-5">
         <div className="container">
           <a className="navbar-brand" href="#">
             Logo Brand
           </a>
-          <button
-            className="navbar-toggler"
-            type="button"
-            data-bs-toggle="collapse"
-            data-bs-target="#navbarNav"
-            aria-controls="navbarNav"
-            aria-expanded="false"
-            aria-label="Toggle navigation"
-          >
+          <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
             <span className="navbar-toggler-icon"></span>
           </button>
-          <div
-            className="visible navbar-collapse collapse justify-content-end"
-            id="navbarNav"
-          >
-            <ul className="navbar-nav">
-              <li className="nav-item">
-                <a className="nav-link" href="#">
+          <div className="visible navbar-collapse collapse justify-content-center" id="navbarNav">
+            <ul className=" d-flex list-style-none align-items-center justify-content-center">
+              <li className="nav-item dropdown">
+                <button className="dropdown nav-link text-white dropdown-toggle" href="#" type="button" id="dropdownMenu2" data-toggle="dropdown">
                   Нүүр
-                </a>
+                </button>
+              </li>
+              <li>
+                <NavbarDropDown
+                  item={{
+                    name: 'Бидний',
+                    children: [
+                      { name: 'Our courses', href: '#' },
+                      { name: 'About us', href: '#' },
+                    ],
+                  }}
+                />
               </li>
               <li className="nav-item">
-                <a className="nav-link " href="#services">
-                  Хичээлүүд
-                </a>
-              </li>
-              <li className="nav-item">
-                <a className="nav-link" href="#aboutus">
+                <a className="nav-link text-white" href="#services">
                   Бидний тухай
                 </a>
               </li>
               <li className="nav-item">
-                <a className="nav-link" href="#contact">
+                <a className="nav-link text-white" href="#aboutus">
+                  Хичээлүүд
+                </a>
+              </li>
+              <li className="nav-item">
+                <a className="nav-link text-white" href="#contact">
                   Холбоо барих
                 </a>
               </li>
               <li className="nav-item bold">
-                <a className="nav-link" href="/signin">
+                <a className="nav-link text-white" href="/signin">
                   Нэвтрэх
                 </a>
               </li>
@@ -51,11 +53,6 @@ export const Navbar = () => {
           </div>
         </div>
       </nav>
-      <script
-        src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"
-        integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3"
-        crossorigin="anonymous"
-      ></script>
     </>
   );
 };
