@@ -14,13 +14,15 @@ export const SignInScreen = () => {
   const { setCurrentUser } = useCurrentUser();
 
   const submitSignIn = () => {
-    axios.post("/login", { email, password }).then((res) => {
-      const { body } = res.data;
-      localStorage.setItem("token", body.token);
-      setCurrentUser(body.user);
-      toast.success("Амжилттай нэвтэрлээ");
-      navigate("/");
-    });
+    axios
+      .post("http://localhost:8000/signin", { email, password })
+      .then((res) => {
+        const { body } = res.data;
+        localStorage.setItem("token", body.token);
+        setCurrentUser(body.user);
+        toast.success("Амжилттай нэвтэрлээ");
+        navigate("/home");
+      });
   };
 
   return (
