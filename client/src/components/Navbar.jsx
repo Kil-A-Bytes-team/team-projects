@@ -13,11 +13,15 @@ export const Navbar = () => {
           </button>
           <div className="visible navbar-collapse collapse justify-content-center" id="navbarNav">
             <ul className=" d-flex list-style-none align-items-center justify-content-center">
-              <li className="nav-item dropdown">
-                <button className="dropdown nav-link text-white dropdown-toggle" href="#" type="button" id="dropdownMenu2" data-toggle="dropdown">
-                  Нүүр
-                </button>
-              </li>
+              <NavbarDropDown
+                  item={{
+                    name: 'Нүүр',
+                    children: [
+                      { name: 'Our courses', href: '#' },
+                      { name: 'About us', href: '#' },
+                    ],
+                  }}
+                />
               <li>
                 <NavbarDropDown
                   item={{
