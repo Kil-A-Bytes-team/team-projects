@@ -3,13 +3,13 @@ import jwt from "jsonwebtoken";
 import { createUser } from "../services/usersService";
 import { userModel } from "../models/userModel";
 
-export const registerUser = async ({ email, password }) => {
+export const signUpUser = async ({ email, password }) => {
   password = await bcrypt.hash(password, 10);
   const user = await createUser({ email, password, name: email.split("@")[0] });
   return user;
 };
 
-export const loginUser = async ({ email, password }) => {
+export const signInUser = async ({ email, password }) => {
   if (!email) {
     return { success: false, status: 400, message: "Email required" };
   }

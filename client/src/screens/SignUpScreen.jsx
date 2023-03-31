@@ -12,11 +12,11 @@ export const SignUpScreen = () => {
   const [repassword, setRepassword] = useState("");
   const navigate = useNavigate();
 
-  const submitRegister = () => {
+  const submitSignUp = () => {
     const body = { email, password, repassword };
-    axios.post("/register", body).then(() => {
+    axios.post("/signup", body).then(() => {
       toast.success("Бүртгэл амжилттай");
-      navigate("/login");
+      navigate("/signin");
     });
   };
 
@@ -32,7 +32,7 @@ export const SignUpScreen = () => {
               className="space-y-4 md:space-y-6"
               onSubmit={(e) => {
                 e.preventDefault();
-                submitRegister();
+                submitSignUp();
               }}
             >
               <InputGroup
