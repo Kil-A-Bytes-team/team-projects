@@ -7,7 +7,7 @@ import { useCurrentUser } from "./hooks/useCurrentUser";
 
 function App() {
   const { currentUser } = useCurrentUser();
-  if (!currentUser) {
+  if (currentUser) {
     return (
       <Routes>
         <Route path="*" element={<NotFoundScreen />} />

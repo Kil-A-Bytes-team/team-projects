@@ -109,13 +109,13 @@ export const NotFoundScreen = () => {
         {!currentUser ? (
           <>
             <Link
-              to={"/login"}
+              to={"/signin"}
               className="text-gray-500 font-mono text-xl bg-gray-200 p-3 rounded-md hover:shadow-md mr-4"
             >
               Нэвтрэх
             </Link>
             <Link
-              to={"/register"}
+              to={"/signup"}
               className="text-gray-700 font-mono text-xl bg-gray-500 p-3 rounded-md hover:shadow-md"
             >
               Бүртгүүлэх

@@ -6,20 +6,19 @@ import { useState } from "react";
 import axios from "axios";
 import { toast } from "react-toastify";
 
-export const RegisterScreen = () => {
+export const SignUpScreen = () => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [repassword, setRepassword] = useState("");
   const navigate = useNavigate();
 
-  const submitRegister = () => {
+  const submitSignUp = () => {
     const body = { email, password, repassword };
-    axios.post("/register", body).then(() => {
+    axios.post("/signup", body).then(() => {
       toast.success("Бүртгэл амжилттай");
-      navigate("/login");
+      navigate("/signin");
     });
   };
-
   return (
     <section className="bg-gray-50 dark:bg-gray-900 min-h-screen">
       <div className="flex flex-col items-center justify-center px-6 py-8 mx-auto md:h-screen lg:py-0">
@@ -32,7 +31,7 @@ export const RegisterScreen = () => {
               className="space-y-4 md:space-y-6"
               onSubmit={(e) => {
                 e.preventDefault();
-                submitRegister();
+                submitSignUp();
               }}
             >
               <InputGroup
