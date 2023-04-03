@@ -8,6 +8,7 @@ export const AxiosWrapper = ({ children }) => {
 
   axios.defaults.baseURL = process.env.REACT_APP_CALLBACK_URL || "";
 
+
   axios.interceptors.request.use(
     (config) => {
       config.headers.Authorization = token;
