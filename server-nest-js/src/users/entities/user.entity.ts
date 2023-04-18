@@ -1,24 +1,26 @@
-import mongoose from "mongoose";
+import { Prop, Schema, SchemaFactory } from '@nestjs/mongoose';
+import { Date, HydratedDocument, Model } from 'mongoose';
+import { nanoid } from 'nanoid';
 
+export type UserDocument = HydratedDocument<User>;
+
+@Schema({timestamps: true})
 export class User {
-    name: {
-    type: String,
-    required: true,
-  };
+  @Prop({default: ()=>nanoid(), type: String})
+  _id: string;
+  
+  @Prop({ required: true })
+  name: string;
 
-  email: {
-    type: String,
-    unique: true,
-    required: true,
-  };
-  role: {
-    type: mongoose.Types.ObjectId,
-    ref: "UserRole",
-  };
-  roles: {
-    type: [mongoose.Types.ObjectId],
-    ref: "UserRole",
-  };
+  @Prop({ required: true, unique: true})
+  email: string;
 
-  password: String;
+  @Prop()
+  password: string;
+
+  createdAt: Date;
+
+  updatedAt: Date;
 }
+
+export const UserSchema = SchemaFactory.createForClass(User);
