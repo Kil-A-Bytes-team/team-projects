@@ -3,7 +3,7 @@ import { InjectModel } from '@nestjs/mongoose';
 import { Model } from 'mongoose';
 import { CreateUserDto } from './dto/create-user.dto';
 import { UpdateUserDto } from './dto/update-user.dto';
-import { User } from './schemas/user.schema';
+import { User } from './entities/user.entity';
 
 @Injectable()
 export class UsersService {
@@ -16,10 +16,15 @@ export class UsersService {
    async findAllUser(): Promise<User[]> {
     return this.userModel.find().exec();
   }
-
-  async findOneUser(id: string): Promise<User> {
-
-    return this.userModel.findById(id).exec();
+  async findOneUser(identifier: string): Promise<User | null> {
+    // Check if the identifier is a valid Id (assumes MongoDB as the database)
+    if (identifier.match(/^[0-9a-fA-F]{24}$/)) {
+      // Find user by id
+      return this.userModel.findById(identifier).exec();
+    } else {
+      // Find user by email
+      return this.userModel.findOne({ email: identifier }).exec();
+    }
   }
 
   async updateUser(id: string, updateUserDto: UpdateUserDto):Promise<User> {
