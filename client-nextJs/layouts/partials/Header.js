@@ -8,6 +8,7 @@ import Link from "next/link";
 import { useRouter } from "next/router";
 import React, { useEffect, useState } from "react";
 import { IoSearch } from "react-icons/io5";
+import { AiOutlineShoppingCart } from "react-icons/ai";
 
 const Header = () => {
   // distructuring the main menu from menu object
@@ -111,7 +112,11 @@ const Header = () => {
             </ul>
             {/* header social */}
           </div>
+
           <ThemeSwitcher />
+          <div className="shopping-cart">
+            <AiOutlineShoppingCart />
+          </div>
           {/* Header search */}
           <div
             className="search-icon"
@@ -148,7 +153,7 @@ const Header = () => {
         />
       </nav>
       {showMenu && (
-        <div className="header-backdrop absolute top-0 left-0 h-[100vh] w-full bg-black/50 lg:hidden"></div>
+        <div className="header-backdrop absolute left-0 top-0 h-[100vh] w-full bg-black/50 lg:hidden"></div>
       )}
     </header>
   );
