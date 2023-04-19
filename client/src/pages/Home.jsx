@@ -4,7 +4,7 @@ export const Home = () => {
   return (
     <>
       <Navbar />
-
+    {/* hi */}
       <main>
         <div className="bg-dark p-5">
           <div className="container">
