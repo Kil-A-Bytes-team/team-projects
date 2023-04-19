@@ -1,28 +1,33 @@
 {
   "main": [
     {
-      "name": "Home",
+      "name": "Нүүр хуудас",
       "url": "/"
     },
     {
-      "name": "About",
+      "name": "Хичээлүүд",
       "url": "/about"
     },
     {
-      "name": "Elements",
+      "name": "Мэргэжил",
       "url": "/elements"
     },
     {
-      "name": "Contact",
+      "name": "Бидний тухай",
       "url": "/contact"
     },
     {
-      "name": "Pages",
+      "name": "Мэдээ мэдээлэл",
       "url": "",
       "hasChildren": true,
       "children": [
         {
-          "name": "Categories",
+          "name": "Тэтгэлэг",
+          "url": "/categories"
+        },
+
+        {
+          "name": "Ажлын зарын жишээ",
           "url": "/categories"
         }
       ]
@@ -30,19 +35,19 @@
   ],
   "footer": [
     {
-      "name": "Home",
+      "name": "Нүүр хуудас",
       "url": "/"
     },
     {
-      "name": "About",
+      "name": "Хичээлүүд",
       "url": "/about"
     },
     {
-      "name": "Contact",
+      "name": "Мэргэжил",
       "url": "/contact"
     },
     {
-      "name": "Privacy Policy",
+      "name": "Мэдээ мэдээлэл",
       "url": "#"
     }
   ]
