@@ -4,7 +4,6 @@ banner:
   title_small: "Kil-A-Bytes's Home"
   content: Are Developer and recently started your own business Already made website to ensure presence wants to develop.
   image_enable: true
-  image: /images/banner-author.png
   button:
     enable: true
     label: Know About Us
