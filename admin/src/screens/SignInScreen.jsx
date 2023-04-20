@@ -15,7 +15,7 @@ export const SignInScreen = () => {
 
   const submitSignIn = () => {
     axios.post("/signin", { email, password }).then((res) => {
-      const { body } = res.data;
+      const body = res.data;
       localStorage.setItem("token", body.token);
       setCurrentUser(body.user);
       toast.success("Амжилттай нэвтэрлээ");

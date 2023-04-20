@@ -1,4 +1,4 @@
-import { Injectable } from '@nestjs/common';
+import { HttpException, HttpStatus, Injectable } from '@nestjs/common';
 import { JwtService } from '@nestjs/jwt';
 import * as bcrypt from 'bcrypt';
 import jwt from "jsonwebtoken";
@@ -27,19 +27,16 @@ export class AuthService {
     }
     
     let user = await this.usersService.findOneUser(email)
-    if (!user) {
-      return { success: false, status: 400, message: 'User not found' };
-    }
-    const passwordMatch = await bcrypt.compare(password, user.password);
-    if (!passwordMatch) {
-      return { success: false, status: 400, message: 'Password not matching' };
-    }
+  if (!user) throw new HttpException("User not exists", HttpStatus.BAD_REQUEST); 
+  if (!bcrypt.compare(password, user.password)) throw new HttpException("Password not matching", HttpStatus.BAD_REQUEST);
     const payload = { username: user.name, sub: user._id };
 //     {
 //   "access_token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6InRlc3QxMjM0NTY3ODkiLCJzdWIiOiJjcG9NRjY0TS1ZNmRwQVI4cFpkWGgiLCJpYXQiOjE2ODE4MTYzNzQsImV4cCI6MTY4MTgyMzU3NH0.H2H-qKDZ1My_USvMnfKGVB9GUdK9ZaROSZ8WvmPz0bQ"
 // }
+    const token = await this.jwtService.signAsync(payload)
     return {
-      access_token: await this.jwtService.signAsync(payload),
+      user,
+      token: token
     };
   }
 }
