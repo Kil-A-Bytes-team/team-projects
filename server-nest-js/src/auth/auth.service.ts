@@ -27,9 +27,9 @@ export class AuthService {
     }
     
     let user = await this.usersService.findOneUser(email)
-  if (!user) throw new HttpException("User not exists", HttpStatus.BAD_REQUEST); 
-  if (!bcrypt.compare(password, user.password)) throw new HttpException("Password not matching", HttpStatus.BAD_REQUEST);
-    const payload = { username: user.name, sub: user._id };
+    if (!user) throw new HttpException("User not exists", HttpStatus.BAD_REQUEST); 
+    if (!bcrypt.compare(password, user.password)) throw new HttpException("Password not matching", HttpStatus.BAD_REQUEST);
+    const payload = { sub: user};
 //     {
 //   "access_token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6InRlc3QxMjM0NTY3ODkiLCJzdWIiOiJjcG9NRjY0TS1ZNmRwQVI4cFpkWGgiLCJpYXQiOjE2ODE4MTYzNzQsImV4cCI6MTY4MTgyMzU3NH0.H2H-qKDZ1My_USvMnfKGVB9GUdK9ZaROSZ8WvmPz0bQ"
 // }
