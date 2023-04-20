@@ -4,7 +4,6 @@ export default function MainNav() {
       <div className="flex flex-wrap items-center justify-between max-w-screen-xl mx-auto p-4 ">
         <a href="#" className="flex items-center">
           <img src="logo.png" className=" mt-4 h-9 scale-150 ml-12" alt="KIL-A BYTES" />
-          
         </a>
         <div className="flex items-center md:order-2">
           <a

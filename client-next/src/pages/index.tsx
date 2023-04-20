@@ -11,7 +11,7 @@ export default function Home() {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
       </Head>
       <MainNav />
-      <div className="h-screen bg-[#282626] ">
+      <div className="h-screen bg-[#000000] ">
         <div className="container mx-auto">
           <div className="w-2/3 py-32">
             <h1 className="text-xs text-[#7E7E7E] tracking-widest  mb-8">
