@@ -32,14 +32,7 @@ const Home = ({
     <Base>
       {/* Banner */}
       <section className="section banner relative pb-0">
-        <ImageFallback
-          className="absolute bottom-0 left-0 z-[-1] w-full"
-          src={"/images/banner-bg-shape.svg"}
-          width={1905}
-          height={295}
-          alt="banner-shape"
-          priority
-        />
+        
 
         <div className="container">
           <div className="row flex-wrap-reverse items-center justify-center lg:flex-row">
@@ -61,14 +54,6 @@ const Home = ({
             </div>
             {banner.image_enable && (
                 <div className="col-9 lg:col-6">
-                  <ImageFallback
-                    className="mx-auto object-contain"
-                    src={banner.image}
-                    width={548}
-                    height={443}
-                    priority={true}
-                    alt="Banner Image"
-                  />
                 </div>
             )}
           </div>
