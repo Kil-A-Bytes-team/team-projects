@@ -4,6 +4,12 @@ import { nanoid } from 'nanoid';
 
 export type UserDocument = HydratedDocument<User>;
 
+export enum ROLES{
+  ADMIN= 'admin',
+  TEACHER= 'teacher',
+  STUDENT= 'student',
+}
+
 @Schema({timestamps: true})
 export class User {
   @Prop({default: ()=>nanoid(), type: String})
@@ -18,9 +24,14 @@ export class User {
   @Prop()
   password: string;
 
+  @Prop({ type: [{ type: String, enum: Object.values(ROLES) }] }) // Use the enum values as the enum property in the schema
+  roles: ROLES[];
+
   createdAt: Date;
 
   updatedAt: Date;
 }
 
 export const UserSchema = SchemaFactory.createForClass(User);
+
+
