@@ -1,14 +1,36 @@
 ---
 banner:
-  title: Welcome **!**
-  title_small: "Kil-A-Bytes's Home"
-  content: Are Developer and recently started your own business Already made website to ensure presence wants to develop.
+  title: Тавтай морил **!**
+  title_small: "Kil-A-Bytes"
+  content: Цахим хичээл болон тэтгэлэгийн мэдээллийн нэгдсэн сан.
   image_enable: true
   button:
     enable: true
-    label: Know About Us
-    link: /about
+    label: Нэвтрэх / Бүртгүүлэх
+    link: /about 
     rel: ""
+
+
+funfact_banners:  
+  - title: "300"
+    title_small: "Instructor"
+    image: /images/grad-hat.png
+    image_enable: true
+
+  - title: "500"
+    title_small: "Students"
+    image: /images/users-two.png
+    image_enable: true
+    
+  - title: "1000"
+    title_small: "Courses"
+    image: /images/video-camera.png
+    image_enable: true
+
+  - title: "1500"
+    title_small: "Users"
+    image: /images/users-three.png
+    image_enable: true
 
 featured_posts:
   enable: true

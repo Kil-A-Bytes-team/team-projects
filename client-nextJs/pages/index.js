@@ -11,10 +11,12 @@ import { sortByDate } from "@lib/utils/sortFunctions";
 import { markdownify } from "@lib/utils/textConverter";
 import Link from "next/link";
 import { FaRegCalendar } from "react-icons/fa";
+// import indexData from "content/index.json"; 
 const { blog_folder, pagination } = config.settings;
 
 const Home = ({
   banner,
+  funfact_banners,
   posts,
   featured_posts,
   recent_posts,
@@ -32,8 +34,6 @@ const Home = ({
     <Base>
       {/* Banner */}
       <section className="section banner relative pb-0">
-        
-
         <div className="container">
           <div className="row flex-wrap-reverse items-center justify-center lg:flex-row">
             <div className={banner.image_enable ? "mt-12 text-center lg:mt-0 lg:text-left lg:col-6" : "mt-12 text-center lg:mt-0 lg:text-left lg:col-12"}>
@@ -56,6 +56,29 @@ const Home = ({
                 <div className="col-9 lg:col-6">
                 </div>
             )}
+          </div>
+        </div>
+      </section>
+
+      {/* Funfact banner */}
+      <section className="section relative pb-0">
+        <div className="container">
+          <div className="row flex items-center justify-center lg:flex-row">
+            {funfact_banners.map((funfact_banner) => {
+              return <><ImageFallback
+                    className="h-[60px] w-[60px] p-0"
+                    height={60}
+                    width={60}
+                    src={funfact_banner.image}
+                    alt="funfact_banner"
+                  />
+            <div className={funfact_banner.image_enable ? "mt-12 text-center lg:mt-0 lg:text-left lg:col-2" : "mt-12 text-center lg:mt-0 lg:text-left lg:col-12"}>
+                {markdownify(funfact_banner.title, "p")}
+                {markdownify(funfact_banner.title_small, "p")}
+            </div>
+              </>
+            })}
+          
           </div>
         </div>
       </section>
@@ -169,7 +192,7 @@ export default Home;
 export const getStaticProps = async () => {
   const homepage = await getListPage("content/_index.md");
   const { frontmatter } = homepage;
-  const { banner, featured_posts, recent_posts, promotion } = frontmatter;
+  const { banner, funfact_banners, featured_posts, recent_posts, promotion } = frontmatter;
   const posts = getSinglePage(`content/${blog_folder}`);
   const categories = getTaxonomy(`content/${blog_folder}`, "categories");
 
@@ -186,6 +209,7 @@ export const getStaticProps = async () => {
   return {
     props: {
       banner: banner,
+      funfact_banners: funfact_banners,
       posts: posts,
       featured_posts,
       recent_posts,

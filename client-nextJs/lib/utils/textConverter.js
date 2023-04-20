@@ -13,6 +13,7 @@ export const markdownify = (content, tag, className) => {
   if (!content) return null;
 
   const Tag = tag;
+  console.log(content);
   return tag ? (
     <Tag
       className={className}

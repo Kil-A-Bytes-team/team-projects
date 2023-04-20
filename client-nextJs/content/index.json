@@ -1,0 +1,55 @@
+{
+  "banner": {
+    "title": "Тавтай морил !",
+    "title_small": "Kil-A-Bytes",
+    "content": "Цахим хичээл болон тэтгэлэгийн мэдээллийн нэгдсэн сан.",
+    "image_enable": true,
+    "button": {
+      "enable": true,
+      "label": "Нэвтрэх / Бүртгүүлэх",
+      "link": "/about",
+      "rel": ""
+    }
+  },
+  "funfact_banners": [
+    {
+      "title": "30",
+      "title_small": "Instructor",
+      "image": "/images/grad-hat.png",
+      "image_enable": true
+    },
+    {
+      "title": "200 +",
+      "title_small": "Students",
+      "image": "/images/users-two.png",
+      "image_enable": true
+    },
+    {
+      "title": "1000 +",
+      "title_small": "Videos",
+      "image": "/images/video-camera.png",
+      "image_enable": true
+    },
+    {
+      "title": "3000 +",
+      "title_small": "Users",
+      "image": "/images/users-three.png",
+      "image_enable": true
+    }
+  ],
+  "featured_posts" : {
+    "enable" : true,
+    "title": "Featured Posts"
+  },
+  "promotion": {
+      "enable": true,
+      "image": "/images/promotion.png",
+      "link": "#"
+  },
+  "recent_posts":{
+      "title": "Recent Posts",
+      "enable": true
+  }
+
+
+}
