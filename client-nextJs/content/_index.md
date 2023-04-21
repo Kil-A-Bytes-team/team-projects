@@ -2,6 +2,7 @@
 banner:
   title: Тавтай морил **!**
   title_small: "Kil-A-Bytes"
+  image: /images/home-page-banner.png
   content: Цахим хичээл болон тэтгэлэгийн мэдээллийн нэгдсэн сан.
   image_enable: true
   button:
