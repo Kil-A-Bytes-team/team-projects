@@ -3,6 +3,7 @@ import { Routes, Route } from "react-router";
 import { NotFoundScreen } from "./screens/NotFoundScreen";
 import { SignInScreen } from "./screens/SignInScreen";
 import { SignUpScreen } from "./screens/SignUpScreen";
+import { HomeScreen } from "./screens/HomeScreen";
 
 function App() {
   const { currentUser } = useCurrentUser();
@@ -15,7 +16,7 @@ function App() {
       </Routes>
     );
   }
-  return <NotFoundScreen />;
+  return <HomeScreen />;
 }
 
 export default App;
