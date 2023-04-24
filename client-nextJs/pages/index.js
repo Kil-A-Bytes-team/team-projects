@@ -119,10 +119,8 @@ const Home = ({
       {/* Home main */}
       <section className="section">
         <div className="container">
-
           <SliderSection items={Carousels} />
           <div className="row items-start">
-
             {/* Featured posts */}
             {featured_posts.enable && (
               <div className="section">

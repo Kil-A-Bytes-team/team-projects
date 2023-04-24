@@ -114,9 +114,11 @@ const Header = () => {
           </div>
 
           <ThemeSwitcher />
-          <div className="shopping-cart">
-            <AiOutlineShoppingCart />
-          </div>
+          {/* {Shopping cart} */}
+          <button className="shopping-cart">
+            <AiOutlineShoppingCart className="h-[24px] w-[24px]"/>
+          </button>
+
           {/* Header search */}
           <div
             className="search-icon"
