@@ -122,31 +122,6 @@ const Home = ({
 
           <SliderSection items={Carousels} />
           <div className="row items-start">
-            {/* <div className="carousel-container">
-              {Carousels.map((carousel) => {
-                return (
-                  <>
-                    <ImageFallback
-                      className="h-[403px] w-[312px] p-0"
-                      height={403}
-                      width={312}
-                      src={carousel.image}
-                      alt="carousel"
-                    />
-                    <div
-                      className={
-                        carousel.image_enable
-                          ? "mt-12 text-center lg:col-2 lg:mt-0 lg:text-left"
-                          : "mt-12 text-center lg:col-12 lg:mt-0 lg:text-left"
-                      }
-                    >
-                      {markdownify(carousel.title, "p")}
-                      {markdownify(carousel.category, "p")}
-                    </div>
-                  </>
-                );
-              })}
-            </div> */}
 
             {/* Featured posts */}
             {featured_posts.enable && (

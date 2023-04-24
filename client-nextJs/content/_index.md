@@ -13,22 +13,22 @@ banner:
 
 funfact_banners:  
   - title: "300"
-    title_small: "Instructor"
+    title_small: "Багш нар"
     image: /images/grad-hat.png
     image_enable: true
 
-  - title: "500"
-    title_small: "Students"
+  - title: "500 +"
+    title_small: "Суралцагчид"
     image: /images/users-two.png
     image_enable: true
     
-  - title: "1000"
-    title_small: "Courses"
+  - title: "1000 +"
+    title_small: "Хичээлүүд"
     image: /images/video-camera.png
     image_enable: true
 
-  - title: "1500"
-    title_small: "Users"
+  - title: "1500 +"
+    title_small: "Хэрэглэгчид"
     image: /images/users-three.png
     image_enable: true
 
