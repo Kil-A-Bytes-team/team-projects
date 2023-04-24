@@ -13,7 +13,7 @@ banner:
 
 
 funfact_banners:  
-  - title: "300"
+  - title: "30"
     title_small: "Багш нар"
     image: /images/grad-hat.png
     image_enable: true
