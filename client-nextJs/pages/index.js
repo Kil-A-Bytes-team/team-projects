@@ -103,7 +103,7 @@ const Home = ({
       <section className="section">
         <div className="container">
           <div className="row items-start">
-            <div className="mb-12 lg:mb-0 lg:col-8">
+            <div className="mb-12 lg:mb-0 lg:col-12">
               {/* Featured posts */}
               {featured_posts.enable && (
                 <div className="section">
@@ -190,11 +190,11 @@ const Home = ({
               />
             </div>
             {/* sidebar */}
-            <Sidebar
+            {/* <Sidebar
               className={"lg:mt-[9.5rem]"}
               posts={posts}
               categories={categories}
-            />
+            /> */}
           </div>
         </div>
       </section>

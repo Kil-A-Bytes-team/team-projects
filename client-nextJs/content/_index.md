@@ -10,7 +10,6 @@ banner:
     label: Нэвтрэх / Бүртгүүлэх
     link: /signin
     rel: ""
-
 funfact_banners:
   - title: "300"
     title_small: "Багш нар"
