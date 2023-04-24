@@ -8,11 +8,10 @@ banner:
   button:
     enable: true
     label: Нэвтрэх / Бүртгүүлэх
-    link: /about 
+    link: /signin
     rel: ""
 
-
-funfact_banners:  
+funfact_banners:
   - title: "300"
     title_small: "Багш нар"
     image: /images/grad-hat.png
@@ -22,7 +21,7 @@ funfact_banners:
     title_small: "Суралцагчид"
     image: /images/users-two.png
     image_enable: true
-    
+
   - title: "1000 +"
     title_small: "Хичээлүүд"
     image: /images/video-camera.png
@@ -45,5 +44,4 @@ promotion:
 recent_posts:
   title: Recent Posts
   enable: true
-
 ---
