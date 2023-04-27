@@ -1,6 +1,6 @@
 import config from "@config/config.json";
 import Base from "@layouts/Baseof";
-import CarouselButton from "@layouts/components/carouselButton";
+// import CarouselButton from "@layouts/components/carouselButton";
 import ImageFallback from "@layouts/components/ImageFallback";
 import Pagination from "@layouts/components/Pagination";
 import Post from "@layouts/partials/Post";
